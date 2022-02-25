@@ -1,0 +1,6 @@
+<!ELEMENT programe (program+)>
+<!ELEMENT program (titlu, video_link, image, text)>
+<!ELEMENT titlu (#PCDATA)>
+<!ELEMENT video_link (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT text (#PCDATA)>

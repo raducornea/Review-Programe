@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE programe SYSTEM "programe.dtd">
+
 <programe>
-    <program id="1">
-        <titlu_program>Popescu</titlu_program>
+    <program id="1">  <!-- id="1" == nume=valoare-->
+        <titlu>Skype Desktop</titlu>
+        <video_link>un link</video_link>
+        <image>o imagine</image>
+        <text>text pentru tutorial</text>
+    </program>
+
+    <program id="2">
+        <titlu>Discord App</titlu>
+        <video_link>alt link cool</video_link>
+        <image>o imagine frumoasa</image>
+        <text>another tutorial cool text</text>
     </program>
 </programe>
