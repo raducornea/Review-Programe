@@ -6,7 +6,7 @@
         <titlu>Skype Desktop</titlu>
         <video_link>un link</video_link>
         <image>o imagine</image>
-        <text>text pentru tutorial</text>
+        <text>text despre program</text>
     </program>
 
     <program id="2">
@@ -15,4 +15,13 @@
         <image>o imagine frumoasa</image>
         <text>another tutorial cool text</text>
     </program>
+    
+    <program id="3">
+        <titlu>Steam</titlu>
+        <video_link>inca un link la site</video_link>
+        <image>o imagine cu steam yay</image>
+        <text>another tutorial cool text</text>
+        <text>review and stuff la program</text>
+    </program>
+
 </programe>
