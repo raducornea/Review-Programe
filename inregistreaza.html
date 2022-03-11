@@ -1,0 +1,90 @@
+<!DOCTYPE html/>
+<html>
+    <head>
+        <title>Inregistreaza</title>
+    </head>
+    <body>
+        <header>
+            <h1>Review Programe</h1>
+        </header>
+
+        <nav>
+            <a href="index.html">Acasa</a>
+            <a href="inregistreaza.html">Inregistrare</a>
+            <a href="despre.html">Despre</a>
+        </nav>
+        
+        <main>
+            <h2>Inregistreaza</h2>
+            
+            <fieldset>
+                <legend>Inregistreaza</legend>
+                
+                <h4>Informații generale</h4>
+                    <label for="user_name">Nume utilizator</label>
+                    <input type="text" id="user_name" name="user_name"><br><br>
+
+                    <label for="password">Parola</label>
+                    <input type="password" id="password" name="password"><br><br>
+
+                    <label for="nume">Nume</label>
+                    <input type="text" id="nume" name="nume"><br><br>
+
+                    <label for="prenume">Prenume</label>
+                    <input type="text" id="prenume" name="prenume"><br><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"></br><br>
+
+                    <label for="tel">Telefon</label>
+                    <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+
+                <h4>Informații personale</h4>
+                    <label for="sex">Sexul</label>
+                    <select name="sex" id="combobox_sex">
+                        <option value="male">Masculin</option>
+                        <option value="female">Feminin</option>
+                    </select>
+                    </br><br>
+
+                    <label for="favorite_food">Mancarea preferata</label>
+                    <input type="list" list="foods" name="favorite_food" id="favorite_food">
+                    <datalist id="foods">
+                        <option>Salata</option>
+                        <option>Hummus</option>
+                        <option>Beans</option>
+                        <option>Rabdari prajite</option>
+                        <option>Cozonaq</option>
+                    </datalist>
+                    </br><br>
+
+                    <label for="favorite_color">Culoarea preferată</label>
+                    <input type="text" id="favorite_color" name="favorite_color"><br><br>
+
+                    <label for="date">Data nasterii</label>
+                    <input type="date" id="date" name="date"><br><br>
+
+                    <label for="time">Ora</label>
+                    <input type="time" id="time" name="time"><br><br>
+
+                    <label for="range">Varsta</label>
+                    <input type="range" id="range" name="range"><br><br>
+
+                    <label for="url">Adresa paginii personale</label>
+                    <input type="url" id="url" name="url"><br><br>
+
+                    <label for="zona_descriere">Descriere:</label>
+                    <br><br>
+                    <textarea id="Descriere" name="zona_descriere" rows="5" cols="50"></textarea>
+                
+                <br><br>
+                <input type="submit" value="Inregistreaza" disabled>
+            </fieldset>
+
+        </main>
+        
+        <footer>
+            <p>&copy; Review Programe</p>
+        </footer>
+    </body>
+</html>
