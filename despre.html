@@ -1,6 +1,7 @@
 <!DOCTYPE html/>
-<html>
+<html lang="ro">
     <head>
+        <link rel="stylesheet" type="text/css" href="css/stil.css"/>
         <title>Review Programe</title>
     </head>
     <body>
@@ -109,20 +110,22 @@
                     Pentru a comenta, este nevoie sa va loggati:
                 </p>
                 <form>
-                    <label>
+                    <!-- de folosit tabela pentru aliniere -->
+                    <label id="login_user">
                         Utilizator:
                         <input type="text">
                     </label>
                     <br/>
                     
-                    <label>
-                        Parola:
+                    <label id="login_password">
+                        Parola:    
                         <input type="password">
                     </label>
                     <br/>
                     
                     <input type="checkbox" id="checkbox_agreement">
                     <label>Sunt de acord cu termenii si conditiile.</label>
+                    <br/>
                     <br/>
 
                     <button type="login_button">Login</button>
