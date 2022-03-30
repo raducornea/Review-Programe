@@ -1,0 +1,144 @@
+html, head, body {
+    /* important to add margin for body too... */
+    margin: 0px; 
+    background-color: #FFDDE2;
+}
+
+header {
+    background-color: #FAA094;
+    padding: 1px;
+    font-size: 30px;
+}
+
+header > h1 {
+    text-align: left;
+    text-indent: 25px;
+    color: #FFDDE2;
+    text-shadow: 2px 2px 8px #FF0000;
+}
+
+body > main {
+    text-indent: 25px;
+}
+
+nav {
+    background-color: #9ED9CC;
+    font-size: 30px;
+
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+
+    border-top: 1px solid #008C76;
+    border-bottom: 1px solid #FAA094;
+}
+
+nav > a {
+    text-decoration: none;
+    /* border: 1px dotted #FF1133; */
+    color: #008C76; /*33F->3333FFse dubleaza*/
+    margin-left: 50px; /*distanta dintre texte*/
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+nav > a:visited {
+    color: purple;
+}
+
+h1 {
+    color:green;
+    text-align: center;
+    font-size: 40px;
+}
+
+main {
+    margin-left: 200px;
+    width: 600px;
+}
+
+main > h2 {
+    color: #008C76;
+    text-align: center;
+    font-size: 35px;
+    
+}
+
+main > h3 > a {
+    text-decoration: none;
+    color: #008C76; /*33F->3333FFse dubleaza*/
+    font-size: 25px;
+}
+
+/* pseudo-element */
+main > h3 > a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+    text-indent: 0px; /* ca sa nu mai inceapa alte paragrafe*/
+
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+}
+
+/* pseudo-element */
+p::first-letter {
+    font-weight: bold;
+}
+
+footer {
+    /*CSS3 element for radius*/
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    width: 200px;
+    height: 60px;
+
+    text-align: center;
+}
+
+/*labels*/
+label {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+label[id="login_user"]{
+    width: 300px;
+    height: 30px;
+}
+label[id="login_password"]{
+    width: 300px;
+    height: 30px;
+}
+
+/*inputs*/
+input[type=text] {
+    width: 200px;
+    height: 30px;
+}
+input[type=password] {
+    width: 200px;
+    height: 30px;
+}
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+/*button*/
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
