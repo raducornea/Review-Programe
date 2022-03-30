@@ -1,1 +1,1 @@
-c:\Python27\python.exe server_web.py
+c:\users\radu\appdata\local\programs\python\python310\python.exe server_web.py
