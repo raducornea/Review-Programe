@@ -69,3 +69,16 @@ function drawCanvas(){
     ctx.fillStyle = "#FF0000";
     ctx.fillRect(0,0,150,75);
 }
+
+function schimbaContinut(resursa){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("demo").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", resursa + '.html', true);
+    xhttp.send();
+
+    document.getElementById("continut").innerHTML = resursa
+}
