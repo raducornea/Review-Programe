@@ -1,46 +1,33 @@
-<!DOCTYPE html/>
-<html lang="ro">
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/stil.css"/>
-        <script src="js/script.js"></script>
-        <title>Home</title>
-    </head>
-    <body onload="checkCookies()">
-        <main>
-            <aside>
-                <h4>Section 1</h4>
-                <h4>Section 2</h4>
-                <h4>Section 3</h4>
-                
+<aside>
+    <h4>Section 1</h4>
+    <h4>Section 2</h4>
+    <h4>Section 3</h4>
+    
 
-            </aside>
+</aside>
 
-            <section>
-                <h4>Section 1</h4>
+<section>
+    <h4>Section 1</h4>
 
-                <p id="cookiesStatus"></p>
-                <script></script>
-                
-                <p id="theTime"></p>
-                <script>document.getElementById("theTime").innerHTML = getCurrentTime()</script>
+    <p id="cookiesStatus"></p>
+    <script></script>
+    
+    <p id="theTime"></p>
+    <script>document.getElementById("theTime").innerHTML = getCurrentTime()</script>
 
-                <p id="theLocation"></p>
-                <script>getLocation()</script>
+    <p id="theLocation"></p>
+    <script>getLocation()</script>
 
-                <p id="browserDetails"></p>
-                <script>getBrowserDetails()</script>
+    <p id="browserDetails"></p>
+    <script>getBrowserDetails()</script>
 
-            </section>
+</section>
 
-            <section>
-                <canvas id="coolCanvas" width="200" height="100"
-                style="border:1px solid #ff0000;">
-                Your browser does not support the canvas element.
-                </canvas>
-                <script>drawCanvas()</script>
-                
-            </section>
-
-        </main>     
-    </body>
-</html>
+<section>
+    <canvas id="coolCanvas" width="200" height="100"
+    style="border:1px solid #ff0000;">
+    Your browser does not support the canvas element.
+    </canvas>
+    <script>drawCanvas()</script>
+    
+</section>
