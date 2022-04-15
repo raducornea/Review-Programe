@@ -1,11 +1,36 @@
 html, head, body {
     /* important to add margin for body too... */
     margin: 0px; 
-    background-color: #FFDDE2;
+    background-color: #CCFFCC;
 }
 
+/*pentru a face frumos cu footer-ul sa fie jos*/
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #FFCCCC;
+}
+
+.content {
+    background-color: #CCFFCC;
+}
+
+.footer {
+    background-color: #0f8050;
+    margin-top: auto;
+}
+/*pentru a face frumos cu footer-ul sa fie jos*/
+
 header {
-    background-color: #FAA094;
+    background-color: #0f8050;
     padding: 1px;
     font-size: 30px;
 }
@@ -14,7 +39,7 @@ header > h1 {
     text-align: left;
     text-indent: 25px;
     color: #FFDDE2;
-    text-shadow: 2px 2px 8px #FF0000;
+    text-shadow: 3px 2px 3px #FF0000;
 }
 
 .login_register {
@@ -27,9 +52,9 @@ header > h1 {
 
 .login_register td > div > button {
     background-color: #af4c4c; /* Green */
-    border: 3px solid black;
+    border: 1px solid black;
     color: #FFDDE2;
-    padding: 5px;
+    padding: 9px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -76,14 +101,13 @@ h1 {
 
 main {
     margin-left: 200px;
-    width: 600px;
+    margin-right: 200px;
 }
 
 main > h2 {
     color: #008C76;
     text-align: center;
     font-size: 35px;
-    
 }
 
 main > h3 > a {
@@ -112,16 +136,6 @@ p::first-letter {
     font-weight: bold;
 }
 
-footer {
-    /*CSS3 element for radius*/
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    width: 200px;
-    height: 60px;
-
-    text-align: center;
-}
-
 /*labels*/
 label {
     font-size: 20px;
@@ -142,6 +156,14 @@ input[type=text] {
     height: 30px;
 }
 input[type=password] {
+    width: 200px;
+    height: 30px;
+}
+input[type=email] {
+    width: 200px;
+    height: 30px;
+}
+input[type=tel] {
     width: 200px;
     height: 30px;
 }
@@ -169,4 +191,29 @@ a, button {
 
 fieldset {
     width: 300px;
+}
+
+/* for login container details */
+div.container_login {
+    margin-left: 325px;
+    margin-right: 325px;
+}
+
+div.container_login > legend {
+    text-align: center;
+    color: #0f8050;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#LOGIN_BUTTON{
+    background-color: #0f8050;
+    width: 200px;
+    height: 30px;
+}
+
+/* for register container details */
+div.container_inregistrare {
+    margin-left: 250px;
+    margin-right: 250px;
 }
