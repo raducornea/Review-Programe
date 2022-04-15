@@ -17,6 +17,26 @@ header > h1 {
     text-shadow: 2px 2px 8px #FF0000;
 }
 
+.login_register {
+    float: right;
+    justify-content: end;
+    padding-right: 20px;
+    margin-left: 0px; 
+    margin-right: 0px;
+}
+
+.login_register td > div > button {
+    background-color: #af4c4c; /* Green */
+    border: 3px solid black;
+    color: #FFDDE2;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 170px;
+}
+
 body > main {
     text-indent: 25px;
 }
@@ -142,3 +162,11 @@ button {
     font-size: 16px;
 }
 
+/*hover property*/
+a, button {
+    cursor: pointer;
+}
+
+fieldset {
+    width: 300px;
+}
