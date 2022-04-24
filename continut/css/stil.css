@@ -194,13 +194,32 @@ fieldset {
     width: 300px;
 }
 
-/* for login container details */
-div.container_login {
-    margin-left: 325px;
-    margin-right: 325px;
+/* Centering cool divs for login & register
+... Dar arata bine macar */
+#outer_login {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+.container_login {
+    width: 400px;
+    border: 1px solid black;
 }
 
-div.container_login > legend {
+/* TABLE pentru login - centreaza automat*/
+.login_table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login_user{
+    text-align: center;
+}
+
+/* for login container details */
+.container_login > legend {
     text-align: center;
     color: #0f8050;
     font-weight: bold;
@@ -214,7 +233,7 @@ div.container_login > legend {
 }
 
 /* for register container details */
-div.container_inregistrare {
+.container_inregistrare {
     margin-left: 250px;
     margin-right: 250px;
 }
@@ -236,3 +255,4 @@ p, footer{
     display: table;
     width: 100%;
 }
+

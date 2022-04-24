@@ -2,18 +2,20 @@
 <br>
 <br>
 
-<fieldset>
-    <div class="container_login">
+<div id="outer_login">
+    <fieldset class="container_login">
         <legend>Detalii Login</legend>
-        <table>
-            <tr><label id="login_user"></br>Utilizator:</label></tr>
-            <tr><input type="text"></tr>
-    
-            <tr><label id="login_password"></br></br>Parola:</label></tr>
-            <tr><input type="password"></tr>
+        <!-- de stiut pe viitor - pui si <td> ca sa mearga fain -->
+        <table class="login_table">
+            <tr><td><label id="login_user">Utilizator:</label></td></tr>
+            <tr><td><input type="text"></td></tr>
 
-            <tr><p></p></tr>
-            <tr><button type="login_button" id="LOGIN_BUTTON">Conectare</button></tr>
+            <tr><td><label id="login_password">Parola:</label></td></tr>
+            <tr><td><input type="password"></td></tr>
+
+            <tr><td><button type="login_button" id="LOGIN_BUTTON">Conectare</button></td></tr>
+            <br><br>
         </table>
-    </div>
-</fieldset>
+    </fieldset>
+    <br><br>
+</div>
