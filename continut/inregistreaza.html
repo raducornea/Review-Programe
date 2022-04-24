@@ -2,71 +2,114 @@
 <br>
 <br>
 
-<fieldset>
-    <div class="container_inregistrare">
+<div id="outer_register">
+    <fieldset class="container_register">
         <legend>Înregistrează</legend>
-        <h4>Informații generale</h4>
-        <table>
-            <tr><label for="user_name"></br>Nume utilizator</label></tr>
-            <tr><input type="text" id="user_name" name="user_name"><br><br></tr>
-
-            <tr><label for="password">Parolă</label></tr>
-            <tr><input type="password" id="password" name="password"><br><br></tr>
-
-            <tr><label for="nume">Nume</label></tr>
-            <tr><input type="text" id="nume" name="nume"><br><br></tr>
-
-            <tr><label for="prenume">Prenume</label></tr>
-            <tr><input type="text" id="prenume" name="prenume"><br><br></tr>
-
-            <tr><label for="email">Email</label></tr>
-            <tr><input type="email" id="email" name="email"></br><br></tr>
-
-            <tr><label for="tel">Telefon</label></tr>
-            <tr><input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br></tr>
-        </table>
-
-        <!-- <h4>Informații personale</h4>
-        <table>
-            <label for="sex">Sexul</label>
-            <select name="sex" id="combobox_sex">
-                <option value="male">Masculin</option>
-                <option value="female">Feminin</option>
-            </select>
-            </br><br>
-
-            <label for="favorite_food">Mâncarea preferata</label>
-            <input type="list" list="foods" name="favorite_food" id="favorite_food">
-            <datalist id="foods">
-                <option>Salată</option>
-                <option>Hummus</option>
-                <option>Beans</option>
-                <option>Răbdări prăjite</option>
-                <option>Cozonaq</option>
-            </datalist>
-            </br><br>
-
-            <label for="favorite_color">Culoarea preferată</label>
-            <input type="text" id="favorite_color" name="favorite_color"><br><br>
-
-            <label for="date">Data nașterii</label>
-            <input type="date" id="date" name="date"><br><br>
-
-            <label for="time">Ora</label>
-            <input type="time" id="time" name="time"><br><br>
-
-            <label for="range">Vârsta</label>
-            <input type="range" id="range" name="range"><br><br>
-
-            <label for="url">Adresa paginii personale</label>
-            <input type="url" id="url" name="url"><br><br>
-
-            <label for="zona_descriere">Descriere:</label>
-            <br><br>
-            <textarea id="Descriere" name="zona_descriere" rows="5" cols="50"></textarea>
-        </table> -->
         
-        <!-- <br><br>
-        <input type="submit" value="Inregistreaza" disabled> -->
-    </div>
-</fieldset>
+        <!-- Tabelele trebuie sa fie de pe aceeasi linie -->
+        <table class="register_table">
+            <tr>
+                <td>
+                    <table class="general_table">
+                        <tr><td><h4 class="headingfour_register">Informații generale</h4></td></tr>
+
+                        <tr><td><label for="user_name">Nume utilizator:</label></td></tr>
+                        <tr><td><input type="text" id="user_name" name="user_name"></td></tr>
+
+                        <tr><td><label for="password">Parolă:</label></td></tr>
+                        <tr><td><input type="password" id="password" name="password"></td></tr>
+
+                        <tr><td><label for="nume">Nume:</label></td></tr>
+                        <tr><td><input type="text" id="nume" name="nume"></td></tr>
+
+                        <tr><td><label for="prenume">Prenume:</label></td></tr>
+                        <tr><td><input type="text" id="prenume" name="prenume"></td></tr>
+
+                        <tr><td><label for="email">Email:</label></td></tr>
+                        <tr><td><input type="email" id="email" name="email"></td></tr>
+
+                        <tr><td><label for="tel">Telefon:</label></td></tr>
+                        <tr><td><input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></td></tr>
+                    </table>
+                </td>
+                
+                <td>
+                    <table class="personal_table">
+                        <!-- Atentie, ca sunt incrucisate - primul cu al doilea, al treilea cu 4... -->
+
+                        <tr><td colspan="2"><h4 class="headingfour_register">Informații personale</h4></td></tr>
+                        <tr>
+                            <td><label for="sex">Sexul: </label></td>
+                            <td><label for="favorite_food">Mâncarea preferata</label></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="sex" id="combobox_sex">
+                                    <option value="male">Masculin</option>
+                                    <option value="female">Feminin</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="list" list="foods" name="favorite_food" id="favorite_food">
+                                <datalist id="foods">
+                                    <option>Salată</option>
+                                    <option>Hummus</option>
+                                    <option>Beans</option>
+                                    <option>Răbdări prăjite</option>
+                                    <option>Cozonaq</option>
+                                </datalist>
+                            </td>
+                            <td></td>
+                        </tr>
+                            
+                        <tr>
+                            <td><label for="favorite_color">Culoarea preferată</label></td>
+                            <td><label for="date">Data nașterii</label></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="favorite_color" name="favorite_color"></td>
+                            <td><input type="date" id="date" name="date"></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="time">Ora</label></td>
+                            <td><label for="range">Vârsta</label></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="time" id="time" name="time"></td>
+                            <td><input type="range" id="range" name="range"></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="url">Pagina personală</label></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="url" id="url" name="url"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><label for="zona_descriere">Descriere:</label></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr><td colspan="2"><textarea id="Descriere" name="zona_descriere" rows="5" cols="50"></textarea></td></tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input id="REGISTER_BUTTON" type="submit" value="Înregistrează" disabled></td>
+            </tr>
+
+        </table>
+    </fieldset>
+</div>

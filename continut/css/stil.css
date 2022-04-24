@@ -172,6 +172,66 @@ input[type=checkbox] {
     width: 20px;
     height: 20px;
 }
+select[name=sex]{
+    width: 200px;
+    height: 30px;
+}
+input[type=time]{
+    width: 200px;
+    height: 30px;
+}
+input[type=list]{
+    width: 200px;
+    height: 30px;
+}
+input[type=date]{
+    width: 200px;
+    height: 30px;
+}
+input[type=range]{
+    width: 200px;
+    height: 30px;
+}
+input[type=url]{
+    width: 400px;
+    height: 30px;
+}
+textarea[id=Descriere]{
+    width: 400px;
+    height: 80px;
+}
+
+input[type=submit]{
+    padding: 5px 15px;
+    color: #0f8050;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    width: 640px;
+    height: 60px;
+}
+input:disabled[type=submit]{
+    background-color: #CCFFCC; /* Green */
+    color: #0f8050;
+    
+}
+input:enabled[type=submit]{
+    background-color: #0f8050; /* Green */
+    color: #CCFFCC;
+}
+
+.headingfour_register{
+    text-align: center;
+    color: #0f8050;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.general_table, .personal_table{
+    border: 1px solid black;
+}
 
 /*button*/
 button {
@@ -194,9 +254,10 @@ fieldset {
     width: 300px;
 }
 
+/* FOR LOGIN & REGISTER ONLY =============================================*/
 /* Centering cool divs for login & register
 ... Dar arata bine macar */
-#outer_login {
+#outer_login, #outer_register {
     /* border: 1px solid red; */
     width: 100%;
     display: flex;
@@ -207,9 +268,14 @@ fieldset {
     width: 400px;
     border: 1px solid black;
 }
+.container_register{
+    width: 600px;
+    height: 550px;
+    border: 1px solid black;
+}
 
 /* TABLE pentru login - centreaza automat*/
-.login_table {
+.login_table, .register_table {
     margin-left: auto;
     margin-right: auto;
 }
@@ -219,7 +285,7 @@ fieldset {
 }
 
 /* for login container details */
-.container_login > legend {
+.container_login > legend, .container_register > legend{
     text-align: center;
     color: #0f8050;
     font-weight: bold;
@@ -230,12 +296,6 @@ fieldset {
     background-color: #0f8050;
     width: 200px;
     height: 30px;
-}
-
-/* for register container details */
-.container_inregistrare {
-    margin-left: 250px;
-    margin-right: 250px;
 }
 
 .login_register td > div > button{
