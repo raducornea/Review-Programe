@@ -1,7 +1,8 @@
 html, head, body {
     /* important to add margin for body too... */
     margin: 0px; 
-    background-color: #CCFFCC;
+    background-color: #ACE4A3;
+    font-family: monospace
 }
 
 /*pentru a face frumos cu footer-ul sa fie jos*/
@@ -20,7 +21,7 @@ body {
 }
 
 .content {
-    background-color: #CCFFCC;
+    background-color: #ACE4A3;
 }
 
 .footer {
@@ -67,7 +68,7 @@ body > main {
 }
 
 nav {
-    background-color: #9ED9CC;
+    background-color: #065535;
     font-size: 30px;
 
     display: flex;
@@ -81,7 +82,7 @@ nav {
 nav > a {
     text-decoration: none;
     /* border: 1px dotted #FF1133; */
-    color: #008C76; /*33F->3333FFse dubleaza*/
+    color: #CCFFCC; /*33F->3333FFse dubleaza*/
     margin-left: 50px; /*distanta dintre texte*/
 }
 
@@ -216,4 +217,22 @@ div.container_login > legend {
 div.container_inregistrare {
     margin-left: 250px;
     margin-right: 250px;
+}
+
+.login_register td > div > button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+p, footer{
+    font-family: cursive
+}
+
+.container{
+    min-width: 1100px;
+}
+
+/* am pus fara footer, pentru ca nu mai aparea at the bottom */
+.container_without_footer{
+    display: table;
+    width: 100%;
 }

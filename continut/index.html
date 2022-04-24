@@ -1,41 +1,43 @@
 <!DOCTYPE html/>
 <html lang="ro">
     <div class="container">
-        <head>
-            <link rel="stylesheet" type="text/css" href="css/stil.css"/>
-            <script src="js/script.js"></script>
-            <title>Home</title>
-        </head>
+        <div class="container_without_footer">
+            <head>
+                <link rel="stylesheet" type="text/css" href="css/stil.css"/>
+                <script src="js/script.js"></script>
+                <title>Home</title>
+            </head>
 
-        <body onload="schimbaContinut('acasa')">
-            <div class="header">
-                <header>
-                    <table class="login_register">
-                        <tr>
-                            <td><div><button type="login_button" onclick="schimbaContinut('login')">Conectare</button>
-                        </tr>
-                        <tr>
-                            <td><div>
-                                <button type="register_button" onclick="schimbaContinut('inregistreaza')">Înregistrare</button>
-                            </div></td>
-                        </tr>
-                    </table>
-                    <h1>Review Programe</h1>
-                </header>
-            </div>
+            <body onload="schimbaContinut('acasa')">
+                <div class="header">
+                    <header>
+                        <table class="login_register">
+                            <tr>
+                                <td><div><button type="login_button" onclick="schimbaContinut('login')">Conectare</button>
+                            </tr>
+                            <tr>
+                                <td><div>
+                                    <button type="register_button" onclick="schimbaContinut('inregistreaza')">Înregistrare</button>
+                                </div></td>
+                            </tr>
+                        </table>
+                        <h1>Review Programe</h1>
+                    </header>
+                </div>
 
-            <div class="nav">
-                <nav>
-                    <a onclick="schimbaContinut('acasa')">Acasă</a>
-                    <a onclick="schimbaContinut('despre')">Despre</a>
-                    <a onclick="schimbaContinut('video')">Videoclipuri</a>
-                    <a onclick="schimbaContinut('desen')">Desen</a>
-                    <a onclick="schimbaContinut('invat')">Învăț</a>
-                </nav>
-            </div>
-            
-            <div class="content">
-                <main id="continut"></main>
+                <div class="nav">
+                    <nav>
+                        <a onclick="schimbaContinut('acasa')">Acasă</a>
+                        <a onclick="schimbaContinut('despre')">Despre</a>
+                        <a onclick="schimbaContinut('video')">Videoclipuri</a>
+                        <a onclick="schimbaContinut('desen')">Desen</a>
+                        <a onclick="schimbaContinut('invat')">Învăț</a>
+                    </nav>
+                </div>
+                
+                <div class="content">
+                    <main id="continut"></main>
+                </div>
             </div>
 
             <div class="footer">
