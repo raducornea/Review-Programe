@@ -8,6 +8,7 @@ html, head, body {
 /*pentru a face frumos cu footer-ul sa fie jos*/
 body {
     margin: 0;
+    margin-bottom: 50px;
 }
 
 .container {
@@ -27,6 +28,13 @@ body {
 .footer {
     background-color: #0f8050;
     margin-top: auto;
+
+    position: fixed;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }
 /*pentru a face frumos cu footer-ul sa fie jos*/
 
@@ -219,7 +227,6 @@ input[type=submit]{
 input:disabled[type=submit]{
     background-color: #CCFFCC; /* Green */
     color: #0f8050;
-    
 }
 input:enabled[type=submit]{
     background-color: #0f8050; /* Green */
@@ -297,7 +304,6 @@ fieldset {
 }
 
 #LOGIN_BUTTON{
-    background-color: #0f8050;
     width: 200px;
     height: 30px;
 }
@@ -306,8 +312,11 @@ fieldset {
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
-p, footer{
+p, footer, ul, #comment_section, #ZonaComentariu{
     font-family: cursive
+}
+ul{
+    font-size: 20px;
 }
 
 .container{
@@ -356,4 +365,34 @@ img {
     background-color: #0f8050;
     color: #CCFFCC;
     font-weight: bold;
+}
+
+/* inner outer divs... centering ========================================  */
+#inner {
+    display: table;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+  }
+  
+#outer {
+    /* border: 1px solid red; */
+    width: 100%
+}
+
+/* Videoclipuri.... ================================ */
+.videos_table{
+    padding: 30px;
+    border-spacing: 15px; /* asta face spacing intre cells!!!*/
+    background-color: #065535;
+}
+
+.videos_table td{
+    padding: 5px;
+    background-color: #CCFFCC;
+}
+
+/* comentariu section ============================ */
+#ZonaComentariu{
+    font-size: 20px;
+    width: 400px;
 }

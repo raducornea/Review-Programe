@@ -3,19 +3,21 @@
 <br>
 
 <div id="outer_login">
-    <fieldset class="container_login">
-        <legend>Detalii Login</legend>
-        <!-- de stiut pe viitor - pui si <td> ca sa mearga fain -->
-        <table class="login_table">
-            <tr><td><label id="login_user">Utilizator:</label></td></tr>
-            <tr><td><input type="text"></td></tr>
+    <form>
+        <fieldset class="container_login">
+            <legend>Detalii Login</legend>
+            <!-- de stiut pe viitor - pui si <td> ca sa mearga fain -->
+            <table class="login_table">
+                <tr><td><label id="login_user">Utilizator:</label></td></tr>
+                <tr><td><input type="text"></td></tr>
 
-            <tr><td><label id="login_password">Parola:</label></td></tr>
-            <tr><td><input type="password"></td></tr>
+                <tr><td><label id="login_password">Parola:</label></td></tr>
+                <tr><td><input type="password"></td></tr>
 
-            <tr><td><button type="login_button" id="LOGIN_BUTTON">Conectare</button></td></tr>
-            <br><br>
-        </table>
-    </fieldset>
+                <tr><td><input id="LOGIN_BUTTON" type="submit" value="Conectare" disabled></td></tr>
+                <br><br>
+            </table>
+        </fieldset>
+    </form>
     <br><br>
 </div>
