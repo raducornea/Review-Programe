@@ -20,7 +20,7 @@
         accent în acest site, ori de câte ori cineva are o
         curiozitate, neclaritate, sugestie, ori chiar mulțumire.
     </p>
-    <img src="Imagini\friendly-image.jpg" width="250" height="250"/>
+    <img src="Imagini\friendly-image.png" width="250" height="250"/>
     <p>
         Câțiva dintre utilizatorii care ar putea vizita
         acest site se încadrează în următoarele categorii:
@@ -28,39 +28,42 @@
 </section>
 
 <section>
-    <!-- <table border="1"> -->
-    <table>
-        <!-- randul 1 -->
-        <td>
-            <td>Neinițiați</td>
-            <td>Cu puțină experiență</td>
-            <td>Experimentați</td>
-        </td>
+    <div class="user_categories_container">
+        <!-- <table border="1"> -->
+        <table class="user_categories_table">
+            <!-- randul 1 -->
+            <tr class="bold_row">
+                <td></td>
+                <td>Neinițiați</td>
+                <td>Cu puțină experiență</td>
+                <td>Experimentați</td>
+            </tr>
 
-        <!-- randul 2 -->
-        <tr>
-            <td>Motivație</td>
-            <td>Vrea ghidare totală</td>
-            <td>Caută doar link-uri</td>
-            <td>Trivia</td>
-        </tr>
+            <!-- randul 2 -->
+            <tr>
+                <td class="bold_column">Motivație</td>
+                <td>Vrea ghidare totală</td>
+                <td>Caută doar link-uri</td>
+                <td>Trivia</td>
+            </tr>
 
-        <!-- randul 3 -->
-        <tr>
-            <td>Dificultate</td>
-            <td>Mare</td>
-            <td>Medie</td>
-            <td>Mică</td>
-        </tr>
+            <!-- randul 3 -->
+            <tr>
+                <td class="bold_column">Dificultate</td>
+                <td>Mare</td>
+                <td>Medie</td>
+                <td>Mică</td>
+            </tr>
 
-        <!-- randul 4 -->
-        <tr>
-            <td>Încredere</td>
-            <td>Are 5 antiviruși</td>
-            <td>Nu are antivirus</td>
-            <td>E hacker în timpul liber</td>
-        </tr>
-    </table>
+            <!-- randul 4 -->
+            <tr>
+                <td class="bold_column">Încredere</td>
+                <td>Are 5 antiviruși</td>
+                <td>Nu are antivirus</td>
+                <td>E hacker în timpul liber</td>
+            </tr>
+        </table>
+    </div>
 </section>
 
 <section>
@@ -90,19 +93,9 @@
 
 <section>
     <p>
-        Pentru a comenta, este nevoie să vă loggați:
+        Pentru a comenta, este nevoie să vă <b><a onclick="schimbaContinut('login')">loggați</a></b>.
     </p>
     <form>
-        <!-- de folosit tabela pentru aliniere -->
-        
-        
-        <input type="checkbox" id="checkbox_agreement">
-        <label>Sunt de acord cu termenii și condițiile.</label>
-        <br/>
-        <br/>
-
-        
-
         <label>
             Comentariu:
         </label>

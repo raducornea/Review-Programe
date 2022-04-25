@@ -192,6 +192,10 @@ input[type=range]{
     width: 200px;
     height: 30px;
 }
+input[type=color]{
+    width: 200px;
+    height: 30px;
+}
 input[type=url]{
     width: 400px;
     height: 30px;
@@ -316,3 +320,40 @@ p, footer{
     width: 100%;
 }
 
+/* The #outer - CENTRAM IMAGINEA */
+section{
+    /* border: 1px solid red; */
+    width: 100%
+}
+img {
+    height: 250px;
+    width: 250px;
+    display: table;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+.user_categories_container{
+    display: table;
+    margin: 0 auto;
+}
+.user_categories_table{
+    border-collapse: collapse;
+    background-color: #CCFFCC;
+    color: #0f8050;
+    font-family: monospace;
+}
+.user_categories_table td{
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid;
+    width: 200px;
+    height: 50px;
+
+    width: 200px;
+    height: 30px;
+}
+.bold_column, .bold_row{
+    background-color: #0f8050;
+    color: #CCFFCC;
+    font-weight: bold;
+}
