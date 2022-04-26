@@ -1,13 +1,67 @@
+// pentru collapse/expand la sectiuni
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible
+var expandCollapseToggle = true;
+function expandAll(){
+    var expandables = document.getElementsByClassName("collapsible");
+    var expand_collapse = document.getElementById("expand_collapse");
+    expandCollapseToggle = !expandCollapseToggle;
+
+    if(expandCollapseToggle){
+        for (let index = 0; index < expandables.length; index++) {
+            expandables[index].classList.toggle("active");
+            var content = expandables[index].nextElementSibling;
+            content.style.display = "none";
+            expand_collapse.innerHTML = "&#9654; Expand Sections";
+        }
+    }
+    else{
+        for (let index = 0; index < expandables.length; index++) {
+            expandables[index].classList.toggle("active");
+            var content = expandables[index].nextElementSibling;
+            content.style.display = "block";
+            expand_collapse.innerHTML = "&#x25BC; Collapse Sections";
+        }
+    }
+    
+}
+function expandSection(index){
+    var expandables = document.getElementsByClassName("collapsible");
+
+    expandables[index].classList.toggle("active");
+    var content = expandables[index].nextElementSibling;
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } 
+    else {
+        content.style.display = "block";
+    }
+}
+
+// Sectiunea 1 vvv ======================================================
 // pentru debug -> window.allert(text);
 
+// odata cu accesarea paginii Invat, se vor face si functiile
+function onLoadInvat(){
+    checkCookies();
+    // time se face automat la o secunda
+    getUrlAddress();
+    getLocation();
+    getBrowserDetails();
+}
+
 // to get current time
+setInterval(getCurrentTime, 1000); // e pentru a actualiza ceasul
 function getCurrentTime() {
     var today = new Date();
     var theTime = document.getElementById("theTime");
-    theTime.innerText = "The Time is: " + today.toDateString() + " " + today.toLocaleTimeString();
+    theTime.innerHTML = `The Time is: ${today.toDateString()} ${today.toLocaleTimeString()}`;
 }
 
-setInterval(getCurrentTime, 1000);
+// actual url@
+function getUrlAddress(){
+    var url = document.getElementById("urlAddress");
+    url.innerHTML = `Url Address is: ${window.location.href}`;
+}
 
 // to get current location
 function getLocation() {
@@ -20,34 +74,27 @@ function getLocation() {
     var theLocation = document.getElementById("theLocation");
     function success(pos) {
         var crd = pos.coords;
-    
+
         var message = ''
-        message += 'The Position is:'
-        message += `Latitude : ${crd.latitude}`
-        message += `Longitude: ${crd.longitude}`
-        message += `More or less ${crd.accuracy} meters.`
+        message += `The Position is: <br>`
+        message += `Latitude : ${crd.latitude} <br>`
+        message += `Longitude: ${crd.longitude} <br>`
+        message += `More or less ${crd.accuracy} meters`
     
-        theLocation.innerText = message;
+        theLocation.innerHTML = message;
     }
       
     function error(err) {
-        theLocation.innerText = `ERROR(${err.code}): ${err.message}`;
+        theLocation.innerHTML = `ERROR(${err.code}): ${err.message}`;
     }
 
     navigator.geolocation.getCurrentPosition(success, error, options);
 }
 
 // to get browser name and version
-function getBrowserName(){
-    return navigator.appName;
-}
-
-function getBrowserVersion(){
-    return navigator.appVersion;
-}
-
 function getBrowserDetails(){
-    document.getElementById("browserDetails").innerHTML = (getBrowserName() + ' ' + getBrowserVersion());
+    document.getElementById("browserDetails").innerHTML =
+    `User Agent is: ${navigator.userAgent} <br>`;
 }
 
 // functie onload pentru body
@@ -61,8 +108,10 @@ function checkCookies() {
         text = "Cookies are not enabled.";
     }
 
-    document.getElementById("demo").innerHTML = text;
+    document.getElementById("cookiesStatus").innerHTML = text;
 }
+
+// Sectiunea 2 vvv ======================================================
 
 function drawCanvas(){ 
     var canvas = document.getElementById("coolCanvas");
@@ -71,7 +120,7 @@ function drawCanvas(){
     ctx.fillRect(0,0,150,75);
 }
 
-function schimbaContinut(resursa){
+function schimbaContinut(resursa, jsFisier = "", jsFunctie = ""){
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
@@ -81,4 +130,20 @@ function schimbaContinut(resursa){
     };
     xhttp.open("GET", resursa + '.html', true);
     xhttp.send();
+
+    if (jsFisier!="") {
+        var elementScript = document.createElement('script');
+        elementScript.onload = function () {
+            if (jsFunctie) {
+                window[jsFunctie](); // apelam functia dinamic
+            }
+        };
+        elementScript.src = "js/" + jsFisier;
+        document.head.appendChild(elementScript);
+    } 
+    else {
+        if (jsFunctie!="") {
+            window[jsFunctie]();
+        }
+    }
 }
