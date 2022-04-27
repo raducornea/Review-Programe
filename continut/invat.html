@@ -17,10 +17,37 @@
 <section>
     <!-- <h2 class="collapsible" onclick="expandSection(1)">Section 2</h2> -->
     <!-- <div style="display: none;"> -->
-        <canvas id="coolCanvas" width="200" height="100"
-        style="border:1px solid #ff0000;">
-        Your browser does not support the canvas element.
-        </canvas>
-        <script>drawCanvas()</script>
+        <div>
+            <table>
+                <tr>
+                    <td><p>Tool</p></td>
+                    <td><p>Line Width</p></td>
+                    <td><p>Stroke Color</p></td>
+                    <td><p>Fill Color</p></td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <select onchange="cancelDraw()" id="draw_tool">
+                            <option value="rectangle">Rectangle</option>
+                            <option value="ellipse">Ellipse</option>
+                            <option value="line">Line</option>
+                        </select>
+                    </td>
+                    <td><input id="line_width" type="number" min="1" max="30"/></td>
+                    <td><input id="stroke_color" type="color" value="#000000"></td>
+                    <td><input id="fill_color" type="color" value="#FFFFFF"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <canvas onclick="drawCanvas(event)" id="coolCanvas" width="800" height="500">
+                            Your browser does not support the canvas element.
+                        </canvas>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
     <!-- </div> -->
 </section>

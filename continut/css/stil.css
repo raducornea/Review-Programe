@@ -204,6 +204,15 @@ input[type=color]{
     width: 200px;
     height: 30px;
 }
+input[type=number]{
+    width: 200px;
+    height: 30px;
+}
+select[id=draw_tool]{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
 input[type=url]{
     width: 400px;
     height: 30px;
@@ -405,4 +414,9 @@ img {
 }
 .collapsible, #expand_collapse{
     text-align: left;
+}
+
+/* pentru CANVAS */
+#coolCanvas{
+    border: 30px solid #065535;
 }
