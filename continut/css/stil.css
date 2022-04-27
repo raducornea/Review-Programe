@@ -119,7 +119,7 @@ main > h2, h2 {
     font-size: 35px;
 }
 
-main > h3 > a {
+main > h3 > a, aside > a  {
     text-decoration: none;
     color: #008C76; /*33F->3333FFse dubleaza*/
     font-size: 25px;

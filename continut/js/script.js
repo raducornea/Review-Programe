@@ -51,16 +51,11 @@ function onLoadInvat(){
 }
 
 // to get current time
-var isOnInvatPage = false;
 setInterval(getCurrentTime, 1000); // e pentru a actualiza ceasul
 function getCurrentTime() {
-    // ia cu Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')
-    // de la SPA
-    if(isOnInvatPage){ 
-        var today = new Date();
-        var theTime = document.getElementById("theTime");
-        theTime.innerHTML = `The Time is: ${today.toDateString()} ${today.toLocaleTimeString()}`;
-    }
+    var today = new Date();
+    var theTime = document.getElementById("theTime");
+    theTime.innerHTML = `The Time is: ${today.toDateString()} ${today.toLocaleTimeString()}`;
 }
 
 // actual url@
@@ -240,11 +235,6 @@ function schimbaContinut(resursa, jsFisier = "", jsFunctie = ""){
     };
     xhttp.open("GET", resursa + '.html', true);
     xhttp.send();
-
-    // ca sa nu mai dea exceptii
-    isOnInvatPage = false;
-    if (jsFisier === "invat.html")
-        isOnInvatPage = true;
 
     if (jsFisier!="") {
         var elementScript = document.createElement('script');
