@@ -390,6 +390,13 @@ img {
 }
 
 /* Videoclipuri.... ================================ */
+/* centrare cu flex */
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .videos_table{
     padding: 30px;
     border-spacing: 15px; /* asta face spacing intre cells!!!*/
@@ -420,3 +427,4 @@ img {
 #coolCanvas{
     border: 30px solid #065535;
 }
+
