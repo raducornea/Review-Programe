@@ -1,9 +1,0 @@
-<!ELEMENT programe (program+)>
-
-<!ELEMENT program ((titlu+), (video_link+), (image+), (text+))>
-<!ATTLIST program id CDATA #REQUIRED>
-
-<!ELEMENT titlu (#PCDATA)>
-<!ELEMENT video_link (#PCDATA)>
-<!ELEMENT image (#PCDATA)>
-<!ELEMENT text (#PCDATA)>

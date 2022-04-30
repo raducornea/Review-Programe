@@ -355,17 +355,17 @@ img {
     margin: 0 auto;
     /* border: 1px solid black; */
 }
-.user_categories_container{
+.user_categories_container, .programs_container{
     display: table;
     margin: 0 auto;
 }
-.user_categories_table{
+.user_categories_table, .programs_table{
     border-collapse: collapse;
     background-color: #CCFFCC;
     color: #0f8050;
     font-family: monospace;
 }
-.user_categories_table td{
+.user_categories_table td, .programs_table td{
     font-size: 20px;
     text-align: center;
     border: 1px solid;
@@ -442,4 +442,14 @@ img {
 
     width: 150px;
     height: 60px;
+}
+
+.code_section{
+    font-size: 15px;
+    border: 1px dashed gray;
+    background:#F8F8FF;
+
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
 }

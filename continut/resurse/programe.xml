@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE programe SYSTEM "programe.dtd">
+
+<programe>
+    <program id="Program1">  <!-- id="1" == nume=valoare-->
+        <titlu>Skype</titlu>
+        <program_link>skype</program_link>
+        <image>skype-logo.png</image>
+        <text>Vorbește la distanță</text>
+        <review>3/5</review>
+    </program>
+
+    <program id="Program2">
+        <titlu>Discord</titlu>
+        <program_link>discord</program_link>
+        <image>discord-logo.png</image>
+        <text>Comunică organizat în grupuri</text>
+        <review>5/5</review>
+    </program>
+    
+    <program id="Program3">
+        <titlu>Steam</titlu>
+        <program_link>steam</program_link>
+        <image>steam-logo.png</image>
+        <text>Prețurile sunt ok</text>
+        <review>4.5/5</review>
+    </program>
+</programe>
