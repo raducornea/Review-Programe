@@ -233,6 +233,48 @@ function addRow(){
     
 }
 
+// Pentru Login aka verifica.html
+function checkLoginInputs(){
+    var username = document.getElementById("login_user_input").value;
+    var password = document.getElementById("login_user_password").value;
+    var login_input = document.getElementById("LOGIN_BUTTON");
+
+    if(password === "" || username === "")
+        login_input.disabled = true;
+    else
+        login_input.disabled = false;
+}
+
+function checkLogin(){
+    var username = document.getElementById("login_user_input").value;
+    var password = document.getElementById("login_user_password").value;
+    var login_input = document.getElementById("login_result");
+
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var text = this.responseText;
+            var parsed_json = JSON.parse(text);
+            var found = false;
+            
+            for(const element of parsed_json){
+                if(element["utilizator"] === username && element["parola"] === password){
+                    login_input.innerHTML = "Succes!";
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found){
+                login_input.innerHTML = "Inexistent/Gresit!";
+            }
+        }
+    };
+
+    xhttp.open("GET", "resurse/utilizatori.json", true);
+    xhttp.send();
+}
 
 function schimbaContinut(resursa, jsFisier = "", jsFunctie = ""){
     var xhttp = new XMLHttpRequest();

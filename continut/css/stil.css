@@ -233,15 +233,22 @@ input[type=submit]{
     width: 640px;
     height: 60px;
 }
-input:disabled[type=submit]{
+input:disabled[type=submit], #LOGIN_BUTTON:disabled[type=submit]{
     background-color: #CCFFCC; /* Green */
     color: #0f8050;
 }
-input:enabled[type=submit]{
+input:enabled[type=submit], #LOGIN_BUTTON:enabled[type=submit]{
     background-color: #0f8050; /* Green */
     color: #CCFFCC;
 }
 input:enabled[type=submit]:hover{
+    cursor: pointer;
+}
+
+#LOGIN_BUTTON:disabled[type=submit]:hover{
+    cursor: auto;
+}
+#LOGIN_BUTTON:enabled[type=submit]:hover{
     cursor: pointer;
 }
 
@@ -452,4 +459,9 @@ img {
     margin: 20px;
     padding: 20px;
     width: 300px;
+}
+
+#login_result{
+    display: table;
+    margin: 0 auto;
 }

@@ -1,0 +1,5 @@
+[
+    { "utilizator": "test", "parola": "test"},
+    { "utilizator": "admin", "parola": "admin"},
+    { "utilizator": "a", "parola": "a"}
+]
