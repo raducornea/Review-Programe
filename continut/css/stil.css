@@ -241,6 +241,10 @@ input:enabled[type=submit]{
     background-color: #0f8050; /* Green */
     color: #CCFFCC;
 }
+input:enabled[type=submit]:hover{
+    cursor: pointer;
+}
+
 
 .headingfour_register{
     text-align: center;
@@ -428,3 +432,14 @@ img {
     border: 30px solid #065535;
 }
 
+/* pentru tabel */
+#add_row, #add_column{
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    width: 150px;
+    height: 60px;
+}

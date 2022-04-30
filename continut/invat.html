@@ -1,6 +1,7 @@
 <aside>
     <a href="#section1">Browser Cool Functions</a><br>
     <a href="#section2">Canvas Funny Drawing</a><br>
+    <a href="#section3">Table Doing Random</a><br>
 </aside>
 
 <section id="section0">
@@ -53,5 +54,27 @@
                 </tr>
             </table>
         </div>
+    </div>
+</section>
+
+<section id="section3">
+    <h2 class="collapsible" onclick="expandSection(2)">Section 3</h2>
+    <!-- <div style="display: none;"> -->
+        <div>
+            <table>
+                <tr>
+                    <td><p>Index Tabel</p></td>
+                    <td><p>Culoare fundal</p></td>
+                    <td rowspan="2"><input type="submit" id="add_row" enabled value="Add Line" onclick="addRow()"/></td>
+                    <td rowspan="2"><input type="submit" id="add_column" enabled value="Add Column" onclick="addColumn()"/></td>
+                </tr>
+                <tr>
+                    <td><input id="table_exercise_index" type="number" min="0" value="0"/></td>
+                    <td><input id="table_exercise_color" type="color" value="#ff0000"/></td>
+                </tr>
+            </table>
+            
+            <table id="dynamic_table"></table>
+        <!-- </div> -->
     </div>
 </section>

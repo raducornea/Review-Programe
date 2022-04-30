@@ -225,6 +225,15 @@ function initializeCanvas(){
     context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
+// Sectiunea 3 TODO vvv ======================================================
+function addColumn(){
+        
+}
+function addRow(){
+    
+}
+
+
 function schimbaContinut(resursa, jsFisier = "", jsFunctie = ""){
     var xhttp = new XMLHttpRequest();
 
