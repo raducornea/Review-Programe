@@ -2,8 +2,9 @@
 <br>
 <br>
 
+<!-- e suficient sa te loggezi cu   -->
 <div id="outer_register">
-    <form>
+    <form method="post"">
         <fieldset class="container_register">
             <legend>Înregistrează</legend>
             
@@ -15,10 +16,10 @@
                             <tr><td><h4 class="headingfour_register">Informații generale</h4></td></tr>
 
                             <tr><td><label for="user_name">Nume utilizator:</label></td></tr>
-                            <tr><td><input type="text" id="user_name" name="user_name"></td></tr>
+                            <tr><td><input id="register_user_input" type="text" id="user_name" name="user_name" oninput="checkRegisterInputs()"></td></tr>
 
                             <tr><td><label for="password">Parolă:</label></td></tr>
-                            <tr><td><input type="password" id="password" name="password"></td></tr>
+                            <tr><td><input id="register_user_password" type="password" id="password" name="password" oninput="checkRegisterInputs()"></td></tr>
 
                             <tr><td><label for="nume">Nume:</label></td></tr>
                             <tr><td><input type="text" id="nume" name="nume"></td></tr>

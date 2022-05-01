@@ -244,7 +244,6 @@ function checkLoginInputs(){
     else
         login_input.disabled = false;
 }
-
 function checkLogin(){
     var username = document.getElementById("login_user_input").value;
     var password = document.getElementById("login_user_password").value;
@@ -274,6 +273,18 @@ function checkLogin(){
 
     xhttp.open("GET", "resurse/utilizatori.json", true);
     xhttp.send();
+}
+
+// Pentru Register
+function checkRegisterInputs(){
+    var username = document.getElementById("register_user_input").value;
+    var password = document.getElementById("register_user_password").value;
+    var register_input = document.getElementById("REGISTER_BUTTON");
+
+    if(password === "" || username === "")
+        register_input.disabled = true;
+    else
+        register_input.disabled = false;
 }
 
 function schimbaContinut(resursa, jsFisier = "", jsFunctie = ""){

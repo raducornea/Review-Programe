@@ -1,5 +1,34 @@
 [
-    { "utilizator": "test", "parola": "test"},
-    { "utilizator": "admin", "parola": "admin"},
-    { "utilizator": "a", "parola": "a"}
+    {
+        "utilizator": "test",
+        "parola": "test"
+    },
+    {
+        "utilizator": "admin",
+        "parola": "admin"
+    },
+    {
+        "utilizator": "fgdfgdfgd",
+        "parola": "hhhhhhh"
+    },
+    {
+        "utilizator": "dfgdgd",
+        "parola": "dfgdfgdfgdfgdfgd"
+    },
+    {
+        "utilizator": "dfgdfgdf",
+        "parola": "fdgdfgdfgdaaaaaaaaaaaaaaa"
+    },
+    {
+        "utilizator": "amogus",
+        "parola": "amogus"
+    },
+    {
+        "utilizator": "dfgdfgdfg",
+        "parola": "hghghghg"
+    },
+    {
+        "utilizator": "amogus3d",
+        "parola": "amogus3d"
+    }
 ]

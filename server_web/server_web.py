@@ -1,5 +1,6 @@
 import socket
 import os # pentru dimensiunea fisierului
+import json
 
 # creeaza un server socket
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -24,6 +25,50 @@ while True:
 			break
 		cerere = cerere + data.decode()
 		print ('S-a citit mesajul: \n---------------------------\n' + cerere + '\n---------------------------')
+		
+		# Trebuie prelucrat acum mesajul pentru POST
+		if (cerere.startswith("POST")):
+			# luam toate liniile si extragem ce ne trebuie (mesajul din post aflat pe ultima linie)
+			cerere_lines = cerere.split("\n")
+			last_line = cerere_lines[len(cerere_lines) - 1]
+			continut_form = last_line.split("&")
+
+			# trebuie prelucrat continutul mesajului acum
+			if(continut_form[0].startswith("user_name") and continut_form[1].startswith("password")):
+				# luam user si parola din linie
+				user_name = continut_form[0].split("=")[1]
+				password = continut_form[1].split("=")[1]
+
+				# pregatim json-ul
+				current_dir =  os.path.abspath(os.path.dirname(__file__))
+				with open(os.path.abspath(current_dir + "/../continut/resurse/utilizatori.json"), "r+") as json_file:
+					data = json.load(json_file)
+					
+					found = False
+					for data_line in data:
+						if user_name == str(data_line["utilizator"]):
+							print("E deja inclus")
+							found = True
+
+					if not found:
+						new_entry = {
+							"utilizator": user_name,
+							"parola": password
+						}
+						
+						data.append(new_entry)
+						json_formatted_str = json.dumps(data, indent=4)
+
+						# trebuie sters mai intai codul
+						json_file.truncate(0)
+						json_file.seek(0)
+						json_file.write(json_formatted_str)
+
+						print("Am inclus user-ul in JSON")
+
+					print("x"*100)
+
+
 		pozitie = cerere.find('\r\n')
 		if (pozitie > -1):
 			linieDeStart = cerere[0:pozitie]
