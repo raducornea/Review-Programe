@@ -42,6 +42,9 @@ function expandSection(index){
 
 // odata cu accesarea paginii Invat, se vor face si functiile
 function onLoadInvat(){
+    // pentru a nu lua eroare la timer cu innerhtml
+    isInvatPage = true;
+    
     checkCookies();
     // time se face automat la o secunda
     getUrlAddress();
@@ -51,11 +54,14 @@ function onLoadInvat(){
 }
 
 // to get current time
+var isInvatPage = false;
 setInterval(getCurrentTime, 1000); // e pentru a actualiza ceasul
 function getCurrentTime() {
-    var today = new Date();
-    var theTime = document.getElementById("theTime");
-    theTime.innerHTML = `The Time is: ${today.toDateString()} ${today.toLocaleTimeString()}`;
+    if(isInvatPage === true){
+        var today = new Date();
+        var theTime = document.getElementById("theTime");
+        theTime.innerHTML = `The Time is: ${today.toDateString()} ${today.toLocaleTimeString()}`;
+    }
 }
 
 // actual url@
@@ -313,4 +319,6 @@ function schimbaContinut(resursa, jsFisier = "", jsFunctie = ""){
             window[jsFunctie]();
         }
     }
+
+    isInvatPage = false;
 }
