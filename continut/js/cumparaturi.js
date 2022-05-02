@@ -54,7 +54,25 @@ function onloadShoppingPage(){
     }
 }
 
+// partea de worker =====================================================
+// https://medium.com/young-coder/a-simple-introduction-to-web-workers-in-javascript-b3504f9d9d1c
+function receivedWorkerMessage(event) {
+    console.log('Worker said : ' + event.data);
+}
+
+var worker;
 function addProduct(){
+    worker = new Worker("js/worker.js");
+    worker.onmessage = receivedWorkerMessage;
+
+    worker.postMessage(
+        {
+            from: "cumparaturi",
+            to: "worker"
+        }
+    )
+
+
     var tableContent = 
     `<tr class="bold_row">
         <td>Numar:</td>
