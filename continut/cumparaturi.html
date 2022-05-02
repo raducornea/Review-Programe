@@ -1,8 +1,31 @@
-<h1>Cumpărături</h1>
-<form>
-    <label for="nume_produs">First name:</label><br>
-    <input type="text" id="nume_produs" name="nume_produs" value=""><br>
-    <label for="cantitate">Last name:</label><br>
-    <input type="text" id="cantitate" name="cantitate" value=""><br><br>
-    <input type="submit" value="Adaugă">
-</form>
+<h2>Cumpărături</h2>
+
+<div id="outer_login">
+    <div id="container_shopping" class="container_shopping">
+        <!-- <form> -->
+            <table class="shopping_table">
+                <tr>
+                    <td><label for="nume_produs">Nume produs:</label></td>
+                    <td><label for="cantitate">Cantitate:</label></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><input type="text" id="nume_produs" name="nume_produs" value="" oninput="checkShoppingInputs()"></td>
+                    <td><input type="text" id="cantitate" name="cantitate" value="" oninput="checkShoppingInputs()"></td>
+                    <td><button id="ADD_BUTTON" disabled onclick="addProduct()">Adaugă</button></td>
+                    <td><button id="CLEAR_BUTTON" onclick="clearProducts()">Produse Noi</button></td>
+                </tr>
+            </table>
+
+            <table id="lista_cumparaturi">
+                
+            </table>
+        <!-- </form> -->
+    </div>
+</div>
+
+
+
+

@@ -233,11 +233,11 @@ input[type=submit]{
     width: 640px;
     height: 60px;
 }
-input:disabled[type=submit], #LOGIN_BUTTON:disabled[type=submit]{
+input:disabled[type=submit], #LOGIN_BUTTON:disabled[type=submit], #ADD_BUTTON:disabled, #CLEAR_BUTTON:disabled{
     background-color: #CCFFCC; /* Green */
     color: #0f8050;
 }
-input:enabled[type=submit], #LOGIN_BUTTON:enabled[type=submit]{
+input:enabled[type=submit], #LOGIN_BUTTON:enabled[type=submit], #ADD_BUTTON:enabled, #CLEAR_BUTTON:enabled{
     background-color: #0f8050; /* Green */
     color: #CCFFCC;
 }
@@ -245,10 +245,10 @@ input:enabled[type=submit]:hover{
     cursor: pointer;
 }
 
-#LOGIN_BUTTON:disabled[type=submit]:hover{
+#LOGIN_BUTTON:disabled[type=submit]:hover, #ADD_BUTTON:disabled:hover, #CLEAR_BUTTON:disabled:hover{
     cursor: auto;
 }
-#LOGIN_BUTTON:enabled[type=submit]:hover{
+#LOGIN_BUTTON:enabled[type=submit]:hover, #ADD_BUTTON:enabled:hover, #CLEAR_BUTTON:enabled:hover{
     cursor: pointer;
 }
 
@@ -295,7 +295,7 @@ fieldset {
     justify-content: center;
     height: 300px;
 }
-.container_login {
+.container_login{
     width: 400px;
     height: 275px;
     border: 1px solid black;
@@ -305,9 +305,14 @@ fieldset {
     height: 550px;
     border: 1px solid black;
 }
+.container_shopping{
+    width: 1000px;
+    height: 100px;
+    border: 1px solid black;
+}
 
 /* TABLE pentru login - centreaza automat*/
-.login_table, .register_table {
+.login_table, .register_table, .shopping_table, #lista_cumparaturi {
     margin-left: auto;
     margin-right: auto;
 }
@@ -324,7 +329,7 @@ fieldset {
     font-size: 30px;
 }
 
-#LOGIN_BUTTON{
+#LOGIN_BUTTON, #ADD_BUTTON, #CLEAR_BUTTON{
     width: 200px;
     height: 30px;
 }
@@ -366,13 +371,13 @@ img {
     display: table;
     margin: 0 auto;
 }
-.user_categories_table, .programs_table{
+.user_categories_table, .programs_table, #lista_cumparaturi{
     border-collapse: collapse;
     background-color: #CCFFCC;
     color: #0f8050;
     font-family: monospace;
 }
-.user_categories_table td, .programs_table td{
+.user_categories_table td, .programs_table td, #lista_cumparaturi td{
     font-size: 20px;
     text-align: center;
     border: 1px solid;
